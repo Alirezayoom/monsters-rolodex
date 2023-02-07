@@ -5,7 +5,11 @@ class App extends Component {
     super();
 
     this.state = {
-      monsters: [{ name: "Linda" }, { name: "Frank" }, { name: "Jacky" }],
+      monsters: [
+        { id: 1, name: "Linda" },
+        { id: 2, name: "Frank" },
+        { id: 3, name: "Jacky" },
+      ],
     };
   }
 
@@ -13,7 +17,7 @@ class App extends Component {
     return (
       <div>
         {this.state.monsters.map((monster) => {
-          return <h1>{monster.name}</h1>;
+          return <h1 key={monster.id}>{monster.name}</h1>;
         })}
       </div>
     );

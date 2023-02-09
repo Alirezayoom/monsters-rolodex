@@ -1,7 +1,7 @@
 import "./card.css";
 
-const Card = (props) => {
-  const { id, name, email } = props.monster;
+const Card = ({ monster }) => {
+  const { id, name, email } = monster;
   return (
     <div key={id} className="card-container">
       <img
